@@ -1,0 +1,3 @@
+{"input": "Hello", "output": "Hi there!"}
+{"input": "How are you?", "output": "I'm doing well, thank you!"}
+{"input": "What's your name?", "output": "I'm a chatbot."}

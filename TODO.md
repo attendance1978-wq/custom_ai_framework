@@ -1,0 +1,117 @@
+## Directories to Create
+- [x] data/
+- [x] data/raw/
+- [x] data/processed/
+- [x] data/tokenizer/
+- [x] models/
+- [x] models/base/
+- [x] models/fine_tuned/
+- [x] models/fine_tuned/checkpoint-1000/
+- [x] models/tokenizer/
+- [x] notebooks/
+- [x] src/
+- [x] src/data/
+- [x] src/models/
+- [x] src/utils/
+- [x] src/inference/
+- [x] api/
+- [x] web/
+- [x] tests/
+- [x] logs/
+- [x] config/
+
+## Files to Create
+- [x] data/raw/dialogues.jsonl (placeholder)
+- [x] data/processed/train.jsonl (placeholder)
+- [x] data/tokenizer/vocab.json (placeholder)
+- [x] models/base/config.json (sample config)
+- [x] models/base/pytorch_model.bin (placeholder)
+- [x] models/fine_tuned/checkpoint-1000/pytorch_model.bin (placeholder)
+- [x] models/fine_tuned/checkpoint-1000/optimizer.pt (placeholder)
+- [x] models/fine_tuned/checkpoint-1000/config.json (sample config)
+- [x] models/tokenizer/tokenizer.json (placeholder)
+- [x] notebooks/01_data_cleaning.ipynb (basic notebook)
+- [x] notebooks/02_training.ipynb (basic notebook)
+- [x] notebooks/03_evaluation.ipynb (basic notebook)
+- [x] src/data/preprocess.py (basic preprocessing script)
+- [x] src/data/dataset.py (PyTorch dataset class)
+- [x] src/models/gpt_model.py (GPT model definition)
+- [x] src/models/train.py (training script)
+- [x] src/utils/logger.py (logging utilities)
+- [x] src/utils/helpers.py (helper functions)
+- [x] src/inference/chat.py (chatbot script)
+- [x] api/app.py (Flask/FastAPI app)
+- [x] api/requirements.txt (API dependencies)
+- [x] api/Dockerfile (Docker config)
+- [x] web/index.html (chat frontend)
+- [x] web/style.css (styling)
+- [x] web/script.js (frontend logic)
+- [x] tests/test_data.py (data tests)
+- [x] tests/test_model.py (model tests)
+- [x] tests/test_api.py (API tests)
+- [x] logs/training.log (placeholder log)
+- [x] config/config.yaml (hyperparameters)
+- [x] config/model_config.json (model config)
+- [x] requirements.txt (main dependencies)
+- [x] README.md (project description)
+- [x] setup.py (package installer)
+=======
+# TODO: Create Custom AI Chatbot Project Structure
+
+## Directories to Create
+- [x] data/
+- [x] data/raw/
+- [x] data/processed/
+- [x] data/tokenizer/
+- [x] models/
+- [x] models/base/
+- [x] models/fine_tuned/
+- [x] models/fine_tuned/checkpoint-1000/
+- [x] models/tokenizer/
+- [x] notebooks/
+- [x] src/
+- [x] src/data/
+- [x] src/models/
+- [x] src/utils/
+- [x] src/inference/
+- [x] api/
+- [x] web/
+- [x] tests/
+- [x] logs/
+- [x] config/
+
+## Files to Create
+- [x] data/raw/dialogues.jsonl (placeholder)
+- [x] data/processed/train.jsonl (placeholder)
+- [x] data/tokenizer/vocab.json (placeholder)
+- [x] models/base/config.json (sample config)
+- [x] models/base/pytorch_model.bin (placeholder)
+- [x] models/fine_tuned/checkpoint-1000/pytorch_model.bin (placeholder)
+- [x] models/fine_tuned/checkpoint-1000/optimizer.pt (placeholder)
+- [x] models/fine_tuned/checkpoint-1000/config.json (sample config)
+- [x] models/tokenizer/tokenizer.json (placeholder)
+- [x] notebooks/01_data_cleaning.ipynb (basic notebook)
+- [x] notebooks/02_training.ipynb (basic notebook)
+- [x] notebooks/03_evaluation.ipynb (basic notebook)
+- [x] src/data/preprocess.py (basic preprocessing script)
+- [x] src/data/dataset.py (PyTorch dataset class)
+- [x] src/models/gpt_model.py (GPT model definition)
+- [x] src/models/train.py (training script)
+- [x] src/utils/logger.py (logging utilities)
+- [x] src/utils/helpers.py (helper functions)
+- [x] src/inference/chat.py (chatbot script)
+- [x] api/app.py (Flask/FastAPI app)
+- [x] api/requirements.txt (API dependencies)
+- [x] api/Dockerfile (Docker config)
+- [x] web/index.html (chat frontend)
+- [x] web/style.css (styling)
+- [x] web/script.js (frontend logic)
+- [x] tests/test_data.py (data tests)
+- [x] tests/test_model.py (model tests)
+- [x] tests/test_api.py (API tests)
+- [x] logs/training.log (placeholder log)
+- [x] config/config.yaml (hyperparameters)
+- [x] config/model_config.json (model config)
+- [x] requirements.txt (main dependencies)
+- [x] README.md (project description)
+- [x] setup.py (package installer)
