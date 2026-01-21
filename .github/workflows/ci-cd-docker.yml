@@ -1,0 +1,66 @@
+name: CI/CD Pipeline - AI Chatbot
+
+# Trigger workflow on push to main and PRs
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      DOCKER_IMAGE: yourdockerhubusername/custom_ai_chatbot
+
+    steps:
+    # 1️⃣ Checkout repo
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2️⃣ Setup Python 3.11
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    # 3️⃣ Upgrade pip
+    - name: Upgrade pip
+      run: python -m pip install --upgrade pip
+
+    # 4️⃣ Install dependencies
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    # 5️⃣ Run tests
+    - name: Run tests
+      run: pytest tests/ --maxfail=1 --disable-warnings -q
+
+    # 6️⃣ Lint code
+    - name: Lint code with flake8
+      run: |
+        pip install flake8
+        flake8 src/ --count --select=E9,F63,F7,F82 --show-source --statistics
+
+    # 7️⃣ Log in to Docker Hub
+    - name: Docker login
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    # 8️⃣ Build Docker image with commit SHA and latest tag
+    - name: Build Docker image
+      run: |
+        docker build -t $DOCKER_IMAGE:latest -t $DOCKER_IMAGE:${{ github.sha }} .
+
+    # 9️⃣ Push Docker image
+    - name: Push Docker image
+      run: |
+        docker push $DOCKER_IMAGE:latest
+        docker push $DOCKER_IMAGE:${{ github.sha }}
+
+    #  🔟 Optional: Post-build cleanup
+    - name: Cleanup Docker images
+      run: docker image prune -f
