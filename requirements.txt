@@ -1,47 +1,40 @@
-# --- Core / Utility ---
-numpy==1.26.0
-pandas==2.1.0
-pyyaml==6.0
-tqdm==4.66.0
-loguru==0.7.0
-python-dotenv==1.1.0
-requests==2.32.0
+# Core
+numpy>=1.26.0
+pandas>=2.1.0
+pyyaml>=6.0
+tqdm>=4.66.0
+loguru>=0.7.0
+python-dotenv>=1.1.0
+requests>=2.32.0
 
-# --- Database ---
-mysql-connector-python==8.1.1       # MySQL
-psycopg2-binary==2.9.9              # PostgreSQL (optional alternative)
-SQLAlchemy==2.0.23                  # ORM for DB abstraction
+# Database
+mysql-connector-python>=8.0.33,<10.0.0
+SQLAlchemy>=2.0.23
 
-# --- Web / API ---
-fastapi==0.105.0
-uvicorn[standard]==0.23.1
-pydantic==2.2.1
-python-multipart==0.0.6             # For form uploads if needed
+# Web / API
+fastapi>=0.105.0
+uvicorn[standard]>=0.23.1
+pydantic>=2.2.1
+python-multipart>=0.0.6
 
-# --- Model / AI ---
-torch==2.3.0+cu121                   # PyTorch (change CUDA version if needed)
-transformers==4.40.2                 # HuggingFace Transformers
-datasets==2.16.0                     # HuggingFace datasets
-sentencepiece==0.1.99                # Tokenizer support
-accelerate==1.17.0                   # Efficient training
-peft==0.4.0                           # LoRA / Parameter Efficient Fine-tuning
-bitsandbytes==0.41.0                  # 8-bit/quantized training (optional)
+# Model / AI
+torch>=2.3.0
+transformers>=4.40.2
+datasets>=2.16.0
+sentencepiece>=0.1.99
+accelerate>=1.17.0
+peft>=0.4.0
+bitsandbytes>=0.41.0
 
-# --- Evaluation / NLP ---
-nltk==3.9.0
-spacy==3.6.1
-scikit-learn==1.3.1
+# NLP / Evaluation
+nltk>=3.9.0
+spacy>=3.6.1
+scikit-learn>=1.3.1
 
-# --- Security / Auth ---
-cryptography==41.0.3
-bcrypt==4.1.0                        # Optional for secure password/API key storage
-secrets                           # Python built-in, no need to install
+# Security
+cryptography>=41.0.3
+bcrypt>=4.1.0
 
-# --- Optional Web Frontend ---
-jinja2==3.1.3                        # Template engine for FastAPI
-aiofiles==23.2.1                     # Async file handling for FastAPI
-
-
-python-jose==3.3.0           # JWT authentication
-redis==5.2.0                  # Caching / rate limiting
-fastapi-limiter==0.2.1        # Rate limiting using Redis
+# Optional Web Frontend
+jinja2>=3.1.3
+aiofiles>=23.2.1
